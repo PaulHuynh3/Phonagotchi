@@ -27,6 +27,8 @@
 		AA79DD631C99C01C0098CD0D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA79DD621C99C01C0098CD0D /* Default-568h@2x.png */; };
 		AFEF852A19F082EB00C5C416 /* bucket.png in Resources */ = {isa = PBXBuildFile; fileRef = AFEF852819F082EB00C5C416 /* bucket.png */; };
 		AFEF852B19F082EB00C5C416 /* apple.png in Resources */ = {isa = PBXBuildFile; fileRef = AFEF852919F082EB00C5C416 /* apple.png */; };
+		DADB9CD01F6AD4FD00B0076D /* PetOwner.m in Sources */ = {isa = PBXBuildFile; fileRef = DADB9CCF1F6AD4FD00B0076D /* PetOwner.m */; };
+		DADB9CD31F6AD52200B0076D /* Pet.m in Sources */ = {isa = PBXBuildFile; fileRef = DADB9CD21F6AD52200B0076D /* Pet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,10 @@
 		AA79DD621C99C01C0098CD0D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		AFEF852819F082EB00C5C416 /* bucket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bucket.png; sourceTree = "<group>"; };
 		AFEF852919F082EB00C5C416 /* apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apple.png; sourceTree = "<group>"; };
+		DADB9CCE1F6AD4FD00B0076D /* PetOwner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PetOwner.h; sourceTree = "<group>"; };
+		DADB9CCF1F6AD4FD00B0076D /* PetOwner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PetOwner.m; sourceTree = "<group>"; };
+		DADB9CD11F6AD52200B0076D /* Pet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pet.h; sourceTree = "<group>"; };
+		DADB9CD21F6AD52200B0076D /* Pet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pet.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,16 +130,12 @@
 		602CAE461984363700C9FE49 /* Phonagotchi */ = {
 			isa = PBXGroup;
 			children = (
-				AFEF852819F082EB00C5C416 /* bucket.png */,
-				AFEF852919F082EB00C5C416 /* apple.png */,
-				607C5D311985A13300501387 /* default.png */,
-				607C5D321985A13300501387 /* sleeping.png */,
-				607C5D331985A13300501387 /* grumpy.png */,
+				DADB9CCB1F6AD44F00B0076D /* View */,
+				DADB9CCA1F6AD43400B0076D /* Controller */,
+				DADB9CCD1F6AD4B000B0076D /* Model */,
+				DADB9CCC1F6AD46300B0076D /* Images */,
 				602CAE4F1984363800C9FE49 /* LPGAppDelegate.h */,
 				602CAE501984363800C9FE49 /* LPGAppDelegate.m */,
-				602CAE521984363800C9FE49 /* Main.storyboard */,
-				602CAE551984363800C9FE49 /* LPGViewController.h */,
-				602CAE561984363800C9FE49 /* LPGViewController.m */,
 				602CAE581984363900C9FE49 /* Images.xcassets */,
 				602CAE471984363700C9FE49 /* Supporting Files */,
 			);
@@ -168,6 +170,46 @@
 				602CAE681984363900C9FE49 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DADB9CCA1F6AD43400B0076D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				602CAE551984363800C9FE49 /* LPGViewController.h */,
+				602CAE561984363800C9FE49 /* LPGViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		DADB9CCB1F6AD44F00B0076D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				602CAE521984363800C9FE49 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		DADB9CCC1F6AD46300B0076D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				AFEF852819F082EB00C5C416 /* bucket.png */,
+				AFEF852919F082EB00C5C416 /* apple.png */,
+				607C5D311985A13300501387 /* default.png */,
+				607C5D321985A13300501387 /* sleeping.png */,
+				607C5D331985A13300501387 /* grumpy.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		DADB9CCD1F6AD4B000B0076D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DADB9CCE1F6AD4FD00B0076D /* PetOwner.h */,
+				DADB9CCF1F6AD4FD00B0076D /* PetOwner.m */,
+				DADB9CD11F6AD52200B0076D /* Pet.h */,
+				DADB9CD21F6AD52200B0076D /* Pet.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,8 +317,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				602CAE571984363800C9FE49 /* LPGViewController.m in Sources */,
+				DADB9CD01F6AD4FD00B0076D /* PetOwner.m in Sources */,
 				602CAE511984363800C9FE49 /* LPGAppDelegate.m in Sources */,
 				602CAE4D1984363700C9FE49 /* main.m in Sources */,
+				DADB9CD31F6AD52200B0076D /* Pet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
